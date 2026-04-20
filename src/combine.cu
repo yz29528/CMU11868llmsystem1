@@ -362,16 +362,7 @@ __global__ void zipKernel(
   //assert(false && "Not Implemented");
   /// END HW1_2
 }
-/*
-*
-三种方案
-warp reduce：一个warp的32个线程协作完成reduce。
 
-thead block reduce：一个线程块的所有线程协作完成，而一个线程块通常包括多个warp，例如达到1024个线程。
-
-multiple thead block reduce: 多个线程块协作完成。
-
- */
 __global__ void reduceKernel(
     float *out,
     int *out_shape,
